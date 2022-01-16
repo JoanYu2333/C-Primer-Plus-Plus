@@ -11,6 +11,12 @@
 #define _HEAD_H
 
 #include <iostream>
+#include <string>
+#include <cstring>
+
+void Example_1();
+void Example_2();
+void Example_3();
+void Example_4();
 
 #endif
-

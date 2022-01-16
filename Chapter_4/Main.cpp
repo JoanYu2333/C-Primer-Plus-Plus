@@ -11,7 +11,7 @@
 
 int main()
 {
-    Example_4();
+    Example_7();
     system("pause");
     return 0;
 }
@@ -82,4 +82,114 @@ void Example_4()
     cin >> Name_Last;
     Name_Globle = Name_Last + ", " + Name_First;
     cout << "Here's the information in a single string: " << Name_Globle;
+}
+
+void Example_5()
+{
+    using namespace std;
+    struct CandyBar
+    {
+        string model;
+        float height;
+        int kaluri;
+    };
+    CandyBar snack = {"Mocha Munch",
+                      2.3,
+                      350};
+    cout << snack.height << endl
+         << snack.kaluri << endl
+         << snack.model;
+}
+
+void Example_6()
+{
+    using namespace std;
+    struct CandyBar
+    {
+        string model;
+        float height;
+        int kaluri;
+    } snack[3] = {{"Mocha Munch",
+                   2.3,
+                   350},
+                  {"Mocha Munch",
+                   3.5,
+                   350},
+                  {"Mocha Munch",
+                   6.5,
+                   350}};
+    cout << snack[0].height << endl
+         << snack[0].kaluri << endl
+         << snack[0].model;
+    cout << snack[1].height << endl
+         << snack[1].kaluri << endl
+         << snack[1].model;
+    cout << snack[2].height << endl
+         << snack[2].kaluri << endl
+         << snack[2].model;
+}
+
+void Example_7()
+{
+    using namespace std;
+    struct Pizza
+    {
+        string name;
+        float inch;
+        float weight;
+    };
+    Pizza A;
+    cout << "Enter the name and inch and weight: ";
+    cin >> A.name >> A.inch >> A.weight;
+    cout << A.name << " " << A.inch << " " << A.weight;
+}
+
+void Example_8()
+{
+    using namespace std;
+    struct Pizza
+    {
+        string name;
+        float inch;
+        float weight;
+    };
+    Pizza *A = new Pizza;
+    cout << "Enter the name and inch and weight: ";
+    cin >> A->inch >> A->name >> A->weight;
+    cout << A->name << " " << A->inch << " " << A->weight;
+    delete A;
+}
+
+void Example_9()
+{
+    using namespace std;
+    struct CandyBar
+    {
+        string model;
+        float height;
+        int kaluri;
+    };
+    CandyBar *Ptr_1 = new CandyBar;
+    CandyBar *Ptr_2 = new CandyBar;
+    CandyBar *Ptr_3 = new CandyBar;
+
+    /*
+    {
+        ……
+    }
+    */
+
+    delete Ptr_1;
+    delete Ptr_2;
+    delete Ptr_3;
+}
+
+void Example_10()
+{
+    using namespace std;
+    array<float, 3> Score_40m;
+    cout << "Enter 3 times datas";
+    cin >> Score_40m[0] >> Score_40m[1] >> Score_40m[2];
+    cout << "The times are 3, "
+         << "The average score is " << (Score_40m[0] + Score_40m[1] + Score_40m[2]) / 3;
 }

@@ -10,7 +10,7 @@
 #include "Head.h"
 int main(void)
 {
-    Example_2();
+    Example_4();
     /*
     int array[5] = {0, 1, 2, 3, 4};
     for (int x : array)
@@ -37,10 +37,6 @@ void Example_1(void)
     cout << sum;
 }
 
-void Example_3(void)
-{
-}
-
 void Example_2(void)
 {
     using namespace std;
@@ -51,4 +47,38 @@ void Example_2(void)
         factorials.at(i) = i * factorials.at(i - 1);
     for (int i = 0; i <= ArSize; i++)
         cout << i << "! = " << factorials.at(i) << endl;
+}
+
+void Example_3(void)
+{
+    using namespace std;
+    int sum;
+    int temp;
+    do
+    {
+        cout << "Enter the number" << endl;
+        cin >> temp;
+        sum += temp;
+    } while (temp != 0);
+    cout << "The sum are :";
+    cout << sum;
+}
+
+void Example_4(void)
+{
+    using namespace std;
+    const float BENEFIT_SINGLE = 0.1;
+    const float BENEFIT_PLURAL = 0.05;
+    float money_Daphne = 100;
+    float money_Cleo = 100;
+    int count_year = 0;
+    while (money_Cleo <= money_Daphne)
+    {
+        money_Cleo = money_Cleo + money_Cleo * BENEFIT_PLURAL;
+        money_Daphne += 10;
+        count_year += 1;
+    }
+    cout << "The year is : " << count_year << endl;
+    cout << "The money of Daphne and Cleo is : ";
+    cout << money_Daphne << " " << money_Cleo;
 }

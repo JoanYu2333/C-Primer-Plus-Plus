@@ -11,5 +11,7 @@
 #define _HEAD_H_
 
 #include <iostream>
-
+#include <array>
+void Example_1(void);
+void Example_2(void);
 #endif

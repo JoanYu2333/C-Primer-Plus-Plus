@@ -11,7 +11,7 @@
 int main(void)
 {
     using namespace std;
-    Example_7();
+    Example_10();
     system("pause");
     return 0;
 }
@@ -127,7 +127,7 @@ void Example_7(void)
     string rog;
     int i = 0;
     cout << "How many cars do you wish to catalog? ";
-    cin >> number;
+    cin >> number; //注:此处会遗留换行符至缓冲区，需要用ignore函数刷新
     cin.ignore();
     Car *p = new Car[number];
     while (i < number)
@@ -146,5 +146,64 @@ void Example_7(void)
     {
         cout << (p + i)->year_establish << " " << (p + i)->name << endl;
         i++;
+    }
+}
+
+void Example_8(void)
+{
+    using namespace std;
+    char array[200];
+    int count = 0;
+    cout << "Enter words (to stop, type the word done) : " << endl;
+    do
+    {
+        cin >> array;
+        if (!strcmp(array, "done"))
+        {
+            break;
+        }
+        count++;
+    } while (1);
+    cout << "You entered a total of " << count << " words";
+}
+
+void Example_9(void)
+{
+    using namespace std;
+    string temp;
+    string test = "done";
+    int count = 0;
+    cout << "Enter words (to stop, type the word done) : " << endl;
+    do
+    {
+        cin >> temp;
+        if (temp == test)
+        {
+            break;
+        }
+        count++;
+    } while (1);
+    cout << "You entered a total of " << count << " words";
+}
+
+void Example_10(void)
+{
+    using namespace std;
+    int rows;
+    cout << "Enter number of rows: ";
+    cin >> rows;
+    int hang = 1;
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < rows - hang; j++)
+        {
+            cout << ".";
+        }
+        for (int k = 0; k < i + 1; k++)
+        {
+            cout << "*";
+        }
+        cout << endl;
+        hang++;
     }
 }

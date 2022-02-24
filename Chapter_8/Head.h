@@ -11,8 +11,16 @@
 #define _HEAD_H
 #include <iostream>
 #include <array>
+using namespace std;
+struct CandyBar
+{
+    string name;
+    float weight;
+    int heat;
+};
 
 void Example_1(char *p);
 void Example_1(const char *const p, int count);
+void Example_2(CandyBar &A, char *name, double weight, int heat);
 
 #endif

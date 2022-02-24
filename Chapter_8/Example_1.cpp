@@ -6,18 +6,18 @@ void Example_1(const char *const p, int count)
     times++;
     if (count == 0)
     {
-        std::cout << p;
+        cout << p;
     }
     else
     {
         for (int i = 0; i < times; i++)
         {
-            std::cout << p;
+            cout << p;
         }
     }
 }
 
 void Example_1(char *p)
 {
-    std::cout << p;
+    cout << p;
 }

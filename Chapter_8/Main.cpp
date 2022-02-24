@@ -10,8 +10,8 @@
 
 int main()
 {
-    char *p = "abcdefg";
-    Example_1(p);
+    CandyBar Audi;
+    Example_2(Audi, "yujoan", 3.5, 4);
     system("pause");
     return 0;
 }

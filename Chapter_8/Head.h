@@ -12,4 +12,7 @@
 #include <iostream>
 #include <array>
 
+void Example_1(char *p);
+void Example_1(const char *const p, int count);
+
 #endif

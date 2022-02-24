@@ -6,9 +6,12 @@
  * @Creat Date : 2022-02-18
  *
  */
-
 #include "Head.h"
+
 int main()
 {
+    char *p = "abcdefg";
+    Example_1(p);
+    system("pause");
     return 0;
 }

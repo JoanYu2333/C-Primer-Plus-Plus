@@ -10,8 +10,7 @@
 
 int main()
 {
-    CandyBar Audi;
-    Example_2(Audi, "yujoan", 3.5, 4);
+    Example_7();
     system("pause");
     return 0;
 }

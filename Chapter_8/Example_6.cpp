@@ -6,7 +6,7 @@ void Example_6()
     double brray[4] = {1.1, 2.2, 3.3, 4.4};
     cout << *Example_6_maxn(array, 6) << endl;
     cout << *Example_6_maxn(brray, 4) << endl;
-    char *ptr[] = {"aas", "dasda", "sad"};
+    const char *ptr[] = {"aas", "dasda", "sad"};
     cout << *Example_6_maxn(ptr, 3);
 }
 

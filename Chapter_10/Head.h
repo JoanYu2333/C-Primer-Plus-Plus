@@ -15,7 +15,6 @@
 #include <cstring>
 using namespace std;
 
-/*********************************************/
 void Example_1();
 class Bank
 {
@@ -32,9 +31,7 @@ public:
     void SaveMoney(Bank &T, float money);
     void FetchMoney(Bank &T, float money);
 };
-/*********************************************/
 
-/*********************************************/
 void Example_2();
 class Person
 {
@@ -53,24 +50,39 @@ public:
     void Show() const;
     void FormalShow() const;
 };
-/*********************************************/
 
-/*********************************************/
+void Example_3();
+const int Len = 40;
+class golf
+{
+private:
+    char fullname[Len];
+    int handicap;
 
-/*********************************************/
+public:
+    golf(golf &g, const char *name, int hc);
+    int setgolf(golf &g);
+    void sethandicap(golf &g, int hc);
+    void showgolf(const golf &g);
+};
 
-/*********************************************/
+void Example_4();
+namespace SALES
+{
+    const int QUARTERS = 4;
+    class Sales
+    {
+    private:
+        double sales[QUARTERS];
+        double average;
+        double max;
+        double min;
 
-/*********************************************/
-
-/*********************************************/
-
-/*********************************************/
-
-/*********************************************/
-
-/*********************************************/
-
-/*********************************************/
+    public:
+        Sales(Sales &s, const double ar[], int n);
+        void setSales(Sales &s);
+        void showSales(const Sales &s);
+    };
+}
 
 #endif

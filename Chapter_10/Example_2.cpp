@@ -8,12 +8,7 @@ void Example_2()
     Person C("YUJOAN", ptr);
 }
 
-void Person::Show() const
-{
-    cout << this->fname << " " << lname;
-}
-
-Person::Person(const string &ln, const char *fn = "Heyyou")
+Person::Person(const string &ln, const char *fn)
 {
     this->lname = ln;
     strcpy(this->fname, fn);

@@ -85,4 +85,78 @@ namespace SALES
     };
 }
 
+void Example_5();
+struct customer
+{
+    /* data */
+    char fullname[35];
+    double payment;
+};
+typedef customer Item;
+class Stack
+{
+private:
+    enum
+    {
+        MAX = 10
+    };
+    Item items[MAX];
+    int top;
+
+public:
+    Stack();
+    bool isempty() const;
+    bool isfull() const;
+    bool push(const Item &item);
+    bool pop(Item &item);
+};
+
+void Example_6();
+class Move
+{
+private:
+    /* data */
+    double x;
+    double y;
+
+public:
+    Move(double a = 0, double b = 0);
+    void showmove() const;
+    Move add(const Move &m) const;
+    void reset(double a = 0, double b = 0);
+    ~Move();
+};
+
+void Example_7();
+class plorg
+{
+private:
+    char name[19];
+    int CI;
+
+public:
+    plorg();
+    void ModifyCI(int CI);
+    void Show() const;
+    ~plorg();
+};
+
+void Example_8();
+class List
+{
+private:
+    int data;
+    int length;
+    List *next;
+
+public:
+    List(int data = 0, int length = 0);
+    ~List();
+    void Add();
+    List &Create();
+    bool isempty();
+    bool isfull();
+    void getcontext();
+};
+
 #endif

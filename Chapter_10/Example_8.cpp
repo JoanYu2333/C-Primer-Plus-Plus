@@ -42,6 +42,7 @@ bool List::isempty()
 bool List::isfull()
 {
     // The List is Link, Not full
+    return false;
 }
 
 void List::getcontext()

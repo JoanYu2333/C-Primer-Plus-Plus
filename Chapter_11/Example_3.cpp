@@ -1,11 +1,57 @@
 #include "Head.h"
 using namespace std;
 
-void Example_2()
+void Example_3()
 {
+    using VECTORS::Vector;
+    srand(time(0));
+    double direction;
+    Vector step;
+    Vector result(0.0, 0.0);
+    unsigned long steps = 0;
+    double target;
+    int N = 0;
+    double dstep;
+    unsigned long average_steps = 0;
+    unsigned long max_steps = 0;
+    unsigned long min_steps = 50000;
+    cout << "Enter target distance(q to quit): ";
+    while (cin >> target)
+    {
+        cout << "Enter the times of Target :";
+        cin >> N;
+        cout << "Enter step length: ";
+        if (!(cin >> dstep))
+        {
+            break;
+        }
+        for (int i = 0; i < N; i++)
+        {
+            while (result.magval() < target)
+            {
+                direction = rand() % 360;
+                step.reset(dstep, direction, Vector::POL);
+                result = result + step;
+                steps++;
+            }
+            if (steps > max_steps)
+                max_steps = steps;
+            if (steps < min_steps)
+                min_steps = steps;
+            average_steps += steps;
+            result.polar_mode();
+            steps = 0;
+            result.reset(0.0, 0.0);
+        }
+        average_steps /= N;
+        cout << "The avarage is: " << average_steps << endl;
+        cout << "The Max is: " << max_steps << endl;
+        cout << "The Min is: " << min_steps;
+    }
+    cout << "Bye!\n";
 }
 
-namespace VECTOR
+namespace VECTORS
 {
     const double Red_to_deg = 45.0 / atan(1.0);
     void Vector::set_mag()

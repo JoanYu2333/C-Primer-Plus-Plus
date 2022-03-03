@@ -1,4 +1,5 @@
 #include "Head.h"
+using EXMAPLE_1::Time;
 
 void Example_1()
 {
@@ -45,5 +46,5 @@ Time Time::operator+(const Time &t) const
 
 void Time::Show() const
 {
-    cout << hours << " hours, " << minutes << " minutes";
+    std::cout << hours << " hours, " << minutes << " minutes";
 }

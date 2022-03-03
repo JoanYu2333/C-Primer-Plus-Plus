@@ -6,11 +6,11 @@
  * @Creat Date : 2022-02-28
  *
  */
-
 #include "Head.h"
+
 int main()
 {
-    //Example_1();
-    cin.get();
+   // Example_5();
+    std::cin.get();
     return 0;
 }

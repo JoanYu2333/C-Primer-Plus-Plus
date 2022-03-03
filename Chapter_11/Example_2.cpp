@@ -3,6 +3,39 @@ using namespace std;
 
 void Example_2()
 {
+    using VECTOR::Vector;
+    srand(time(0));
+    double direction;
+    Vector step;
+    Vector result(0.0, 0.0);
+    unsigned long steps = 0;
+    double target;
+    double dstep;
+    cout << "Enter target distance(q to quit): ";
+    while (cin >> target)
+    {
+        cout << "Enter step length: ";
+        if (!(cin >> dstep))
+        {
+            break;
+        }
+        while (result.magval() < target)
+        {
+            direction = rand() % 360;
+            step.reset(dstep, direction, Vector::POL);
+            result = result + step;
+            steps++;
+        }
+        cout << "After " << steps << " steps, the subject has the following location:\n";
+        cout << result << endl;
+        result.polar_mode();
+        cout << " or\n"
+             << result << endl;
+        steps = 0;
+        result.reset(0.0, 0.0);
+        cout << "Enter target distance (q to quit): ";
+    }
+    cout << "Bye!\n";
 }
 
 namespace VECTOR
@@ -16,13 +49,15 @@ namespace VECTOR
     {
         cout << "The function has been deleted" << endl;
     }
-    void Vector::set_x()
+    void Vector::set_x(double n1, double n2)
     {
-        x = magval() * cos(angval());
+        x = n1 * cos(n2);
+        // x = magval() * cos(angval());
     }
-    void Vector::set_y()
+    void Vector::set_y(double n1, double n2)
     {
-        y = magval() * sin(angval());
+        y = n1 * sin(n2);
+        // y = magval() * sin(angval());
     }
     Vector::Vector()
     {
@@ -39,8 +74,8 @@ namespace VECTOR
         }
         else if (form == POL)
         {
-            set_x();
-            set_y();
+            set_x(n1, n2);
+            set_y(n1, n2);
         }
         else
         {
@@ -61,8 +96,8 @@ namespace VECTOR
         }
         else if (form == POL)
         {
-            set_x();
-            set_y();
+            set_x(n1, n2);
+            set_y(n1, n2);
         }
         else
         {

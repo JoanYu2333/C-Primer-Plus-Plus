@@ -2,6 +2,8 @@
 #define EXAMPLE_2_HEAD
 #include <iostream>
 #include <cmath>
+#include <cstdlib>
+#include <ctime>
 
 void Example_2();
 namespace VECTOR
@@ -21,8 +23,8 @@ namespace VECTOR
         Mode mode;
         void set_mag();
         void set_ang();
-        void set_x();
-        void set_y();
+        void set_x(double n1, double n2);
+        void set_y(double n1, double n2);
 
     public:
         Vector();

@@ -3,8 +3,8 @@
 #include <iostream>
 #include <cmath>
 
-void Example_2();
-namespace VECTOR
+void Example_3();
+namespace VECTORS
 {
     class Vector
     {

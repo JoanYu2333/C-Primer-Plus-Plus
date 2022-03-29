@@ -13,6 +13,8 @@
 #include <array>
 #include <cstring>
 #include <valarray>
+#include <random>
+#include <ctime>
 using std::array;
 using std::cin;
 using std::cout;

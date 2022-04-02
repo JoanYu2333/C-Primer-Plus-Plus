@@ -41,7 +41,11 @@
         "typeinfo": "cpp",
         "cstring": "cpp",
         "ctime": "cpp",
-        "valarray": "cpp"
+        "valarray": "cpp",
+        "functional": "cpp",
+        "iterator": "cpp",
+        "numeric": "cpp",
+        "random": "cpp"
     },
     "C_Cpp.errorSquiggles": "Enabled"
 }

@@ -7,11 +7,12 @@
  *
  */
 
-#include "Head.h"
+#include "Example_1.h"
+#include "Example_2.h"
+#include "Example_3.h"
 
 int main()
 {
-    std::unique_ptr<string> ptr(new string);
-    
-    system("pause");
+     EXAMPLE3::Example_3();
+     system("pause");
 }

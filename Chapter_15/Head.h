@@ -12,6 +12,8 @@
 #include <array>
 #include <cstring>
 #include <memory>
+#include <random>
+#include <stdexcept>
 using std::array;
 using std::cin;
 using std::cout;

@@ -10,9 +10,10 @@
 #include "Example_1.h"
 #include "Example_2.h"
 #include "Example_3.h"
+#include "Example_4.h"
 
 int main()
 {
-     EXAMPLE3::Example_3();
+     Example_4();
      system("pause");
 }
